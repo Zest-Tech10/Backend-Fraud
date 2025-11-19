@@ -1,0 +1,18 @@
+
+# --- Core API and Server ---
+
+fastapi
+uvicorn[standard]  
+pydantic
+python-multipart
+requests          
+
+# --- AI / Data Processing ---
+
+numpy             
+pandas             
+scikit-learn
+reportlab    
+
+# --- Environment and Configuration ---
+python-dotenv
