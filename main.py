@@ -246,3 +246,13 @@ def generate_report():
 # if __name__ == "__main__":
 #     print("Starting FastAPI server (with WebSocket/PDF support) at http://127.0.0.1:8000")
 #     uvicorn.run(app, host="127.0.0.1", port=8000)
+
+# ============================================================
+# 🚀 ENTRY POINT
+# ============================================================
+if __name__ == "__main__":
+    import uvicorn
+    print("Starting FastAPI server (with WebSocket/PDF support") 
+#    
+    # logger.info("✅ Starting VacAIgent FastAPI server on port 8000...")
+    uvicorn.run(app, host="0.0.0.0", port=8000)
