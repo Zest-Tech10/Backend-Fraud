@@ -10,7 +10,9 @@ print("Starting model training...")
 
 # 1. Load Data
 try:
-    data = pd.read_csv('creditcard.csv')
+    # data = pd.read_csv('creditcard.csv')
+    DATA_URL = "https://drive.google.com/uc?export=download&id=1jBGMEyO_lfwwFxDAQkQEu_nXJj1LSTa9"
+    data = pd.read_csv(DATA_URL)
 except FileNotFoundError:
     print("ERROR: creditcard.csv not found.")
     print("Please download it from Kaggle and place it in the 'backend' folder.")

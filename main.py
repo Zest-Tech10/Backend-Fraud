@@ -134,7 +134,9 @@ async def websocket_endpoint(websocket: WebSocket):
         print("Analyst Cockpit Disconnected.")
 
 # 9. HITL Endpoint: সিদ্ধান্ত লগ করা
-NEW_DATA_FILE = 'new_training_data.csv'
+# NEW_DATA_FILE = 'new_training_data.csv'
+NEW_DATA_FILE = "https://drive.google.com/uc?export=download&id=1WqwkUjp9qj5HGoKxVEl2YW4lIh9e0Abl"
+
 @app.post("/log_decision")
 def log_decision(data: DecisionData):
     print(f"Logging analyst decision: {data.decision} for transaction.")
@@ -160,7 +162,9 @@ def log_decision(data: DecisionData):
 def retrain_model_task():
     print("Retraining model with new analyst data...")
     try:
-        old_data = pd.read_csv('creditcard.csv')
+        # old_data = pd.read_csv('creditcard.csv')
+        DATA_URL = "https://drive.google.com/uc?export=download&id=1jBGMEyO_lfwwFxDAQkQEu_nXJj1LSTa9"
+        old_data = pd.read_csv(DATA_URL)
     except FileNotFoundError:
         print("ERROR: creditcard.csv not found. Retraining failed.")
         return
